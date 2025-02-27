@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp()); // to create root widget
 }
 
+// stateless widget will not change the state (mean if any infirmation needs to change then it will not update the ui).
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -22,11 +23,13 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// Statefull widget can change the state as needed.
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
   final String title;
 
+// this is the first method to be called to call the state class for this particular class
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
