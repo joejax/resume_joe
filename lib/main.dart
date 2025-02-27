@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 
 void main() {
-  runApp(const MyApp()); // to create root widget
+  runApp(const MyApp()); /* to create root widget */
 }
 
-// stateless widget will not change the state (mean if any infirmation needs to change then it will not update the ui).
+/*stateless widget will not change the state (mean if any infirmation needs to change then it will not update the ui). */
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -23,13 +23,13 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Statefull widget can change the state as needed.
+/* Statefull widget can change the state as needed. */
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
   final String title;
 
-// this is the first method to be called to call the state class for this particular class
+/* this is the first method to be called to call the state class for this particular class */
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -40,10 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
+      /* this is to show the app bar of the application  */
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
+      /* this is tthe main body part of the application  */
+
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.only(left: 10, top: 10, bottom: 20),
@@ -51,6 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              /* this is the first widget in the body which is showing the image and basic detail of the person  */
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -126,6 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(
                 height: 10,
               ),
+              /* here description about the person  */
               SizedBox(
                 height: height * .3,
                 width: width,
@@ -147,7 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(
                 height: 10,
               ),
-
+/* this part is to show the companies which works for  */
               Text(
                 'Companies Work for:-',
                 style: TextStyle(
@@ -193,6 +198,7 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(
                 height: 10,
               ),
+              /* this one is for listing the soft skills  */
               Text(
                 'Soft skills:-',
                 style: TextStyle(
@@ -239,24 +245,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 10,
               ),
 
-              // Container(
-              //   height: height * .2,
-              //   width: width * 2,
-              //   color: Colors.amber,
-              //   child: Row(
-              //     children: [],
-              //   ),
-              // ),
-              SizedBox(
-                height: 2,
-              ),
-              Divider(
-                height: 2,
-                thickness: 2,
-              ),
-              SizedBox(
-                height: 10,
-              ),
+              /* this part is for educational detail */
               Text(
                 'Educatuion:-',
                 style: TextStyle(
@@ -274,6 +263,7 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(
                 height: 10,
               ),
+
               /* Contact Detail */
 
               Text(
@@ -340,7 +330,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
               ),
-
               SizedBox(
                 height: 6,
               ),
